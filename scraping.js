@@ -24,14 +24,7 @@ client.login(config.token);
 
 (async () => {
   const browser = await puppeteer.launch({
-    executablePath: config.executablePath,
-    headless: false,
-    args: [
-      '--no-sandbox',
-      '--disable-gpu',
-      '--enable-webgl',
-      '--window-size=800,800'
-    ]
+    headless: false
   });
 
   module.exports = browser;
